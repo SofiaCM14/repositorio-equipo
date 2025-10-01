@@ -19,7 +19,7 @@
 
     <section class="hero">
         <h2>¡Bienvenido a la pagina principal del formulario!</h2>
-        <a href="contacto.php" class="button">Ir a Contacto</a>
+        <a href="/Contacto/contacto.php" class="button">Ir a Contacto</a>
     </section>
 
     <footer>
