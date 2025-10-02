@@ -6,20 +6,24 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
+    <title>Formulario</title>
+</head>
 <body>
-     <header>
-        <h1>FORMULARIO</h1>
+    <header>
+        <!-- Logo -->
+        <img src="app/imagenes/logo.png" alt="Logo" class="logo">
+
+        <!-- Título -->
+        <h1>PÁGINA PARA ALUMNOS</h1>
+
+        <!-- Botón Inicio -->
+        <a href="index.php" class="header-btn">Inicio</a>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.php">Inicio</a></li>
-        </ul>
-    </nav>
-
     <section class="hero">
-        <h2>¡Bienvenido a la pagina principal del formulario!</h2>
+        <h2>¡Bienvenido a la página principal del formulario!</h2>
         <a href="/Contacto/contacto.php" class="button">Ir a Contacto</a>
+        <a href="/Encuesta/encuesta.php" class="button">Ir a Encuesta</a>
     </section>
 
     <footer>
@@ -27,91 +31,134 @@
     </footer>
 </body>
 
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #000000ff;
+<style>
+    /* ===== Reset ===== */
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #1a237e, #3949ab, #5c6bc0);
+        color: #fff;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* ===== Header ===== */
+    header {
+        background: rgba(25, 118, 210, 0.95);
+        padding: 10px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        position: sticky;
+        top: 0;
+        z-index: 10;
+    }
+
+      .logo {
+      width: 120px;
+     height: auto;
+     display: block;
+      margin: 0 auto;
+     }
+
+
+    header h1 {
+        font-size: 2em;
+        letter-spacing: 1px;
+        flex: 1;
+        text-align: center;
+    }
+
+    /* ===== Botón Inicio en Header ===== */
+    .header-btn {
+        background: linear-gradient(135deg, #42a5f5, #1e88e5);
+        color: white;
+        padding: 10px 20px;
+        border-radius: 30px;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 1em;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    }
+
+    .header-btn:hover {
+        background: linear-gradient(135deg, #64b5f6, #2196f3);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+    }
+
+    /* ===== Hero ===== */
+    .hero {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 60px 20px;
+    }
+
+    .hero h2 {
+        font-size: 2.5em;
+        margin-bottom: 25px;
+        text-shadow: 0 3px 6px rgba(0,0,0,0.3);
+    }
+
+    .hero a.button {
+        display: inline-block;
+        background: linear-gradient(135deg, #42a5f5, #1e88e5);
+        color: white;
+        padding: 14px 32px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-size: 1.1em;
+        font-weight: bold;
+        margin: 12px;
+        box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+        transition: all 0.3s ease;
+    }
+
+    .hero a.button:hover {
+        background: linear-gradient(135deg, #64b5f6, #2196f3);
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.35);
+    }
+
+    /* ===== Footer ===== */
+    footer {
+        background: #0D47A1;
+        text-align: center;
+        padding: 18px;
+        font-size: 0.9em;
+        color: #e3f2fd;
+        box-shadow: 0 -3px 8px rgba(0,0,0,0.2);
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 600px) {
         header {
-            background-color: #1976D2;
-            padding: 10px 0;
-            text-align: center;
-            color: white;
+            flex-direction: column;
+            gap: 10px;
         }
         header h1 {
-            font-size: 2.5em;
-        }
-        nav {
-            background-color: #0D47A1;
-            padding: 15px 0;
-        }
-        nav ul {
+            font-size: 1.5em;
             text-align: center;
         }
-        nav ul li {
-            display: inline;
-            margin: 0 20px;
-        }
-
-        nav ul li a {
-            color: #fff;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav ul li a:hover {
-            color: #000000ff;
-        }
-        .hero {
-            padding: 132px 20px;
-            text-align: center;
-        }
-
         .hero h2 {
-            font-size: 2.2em;
-            color: #1565C0;
-            margin-bottom: 30px;
+            font-size: 1.7em;
         }
-
-        .hero p {
-            font-size: 1.2em;
-            color: #555;
-            margin-bottom: 30px;
-        }
-
         .hero a.button {
-            display: inline-block;
-            background-color: #1b88dcff;
-            color: white;
-            padding: 12px 25px;
-            border-radius: 50px;
-            text-decoration: none;
             font-size: 1em;
+            padding: 12px 24px;
         }
-        .hero a.button:hover {
-            background-color: #52c0ffff;
-        }
-
-        footer {
-            background-color: #1976D2;
-            text-align: center;
-            padding: 20px;
-            margin-top: 40px;
-            font-size: 0.9em;
-            color: #ffffffff;
-        }
-
-        @media (max-width: 600px) {
-            header h1 {
-                font-size: 2em;
-            }
-            .hero h2 {
-                font-size: 1.5em;
-            }
-            nav ul li {
-                display: block;
-                margin: 10px 0;
-            }
-        }
-    </style>
-</head>
-    </body>
-   </html>
+    }
+</style>
+</html>
